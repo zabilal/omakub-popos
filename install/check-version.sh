@@ -4,13 +4,8 @@
 check_ubuntu_version() {
   if [ -f /etc/os-release ]; then
     . /etc/os-release
-    if [ "$ID" = "ubuntu" ]; then
-      if awk -v ver="$VERSION_ID" 'BEGIN {exit !(ver >= 24.04)}'; then
-        return 0
-      else
-        echo "Error: Ubuntu version must be 24.04 or higher. Current version: $VERSION_ID" >&2
-        return 1
-      fi
+    if [ "$ID" = "pop" ]; then
+      echo "$ID"
     else
       echo "Error: This script must be run on Ubuntu. Current OS: $ID" >&2
       return 1

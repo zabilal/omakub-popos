@@ -1,1 +1,1 @@
-source ~/.local/share/omakub/themes/tokyo-night/gnome.sh
+source themes/tokyo-night/gnome.sh
